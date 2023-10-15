@@ -12,6 +12,8 @@ import { MatTableModule } from '@angular/material/table';
   declarations: [],
   imports: [
     CommonModule,
+  ],
+  exports: [
     MatIconModule,
     MatButtonModule,
     ReactiveFormsModule,

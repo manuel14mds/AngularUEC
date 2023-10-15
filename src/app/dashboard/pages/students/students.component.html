@@ -1,0 +1,11 @@
+<mat-card style="margin-bottom: 1rem;">
+    <mat-card-content role="heading">
+        <h1>Pagina Estudiantes</h1>
+    </mat-card-content>
+</mat-card>
+
+<!-- button add new student -->
+<button mat-raised-button color="primary" style="margin-bottom: 1rem;"><mat-icon>add</mat-icon> Nuevo Usuario</button>
+
+<!-- students table -->
+<app-students-table [dataSource]="dataSource"></app-students-table>
