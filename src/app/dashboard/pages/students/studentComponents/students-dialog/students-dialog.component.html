@@ -1,0 +1,47 @@
+<!-- Dialog title -->
+<h1 mat-dialog-title> {{ student?'Editar Estudiante':'Agregar Estudiante' }}</h1>
+
+<!-- Dialog content -->
+<div mat-dialog-content>
+    <form action="" [formGroup]="studentForm" class="row">
+
+        <mat-form-field class="col-12 col-md-6">
+            <mat-label>Nombre</mat-label>
+            <input formControlName="firstName" matInput>
+        </mat-form-field>
+    
+        <mat-form-field class="col-12 col-md-6">
+            <mat-label>Apellido</mat-label>
+            <input formControlName="lastName" matInput>
+        </mat-form-field>
+    
+        <mat-form-field class="col-12 col-md-6">
+            <mat-label>Edad</mat-label>
+            <input formControlName="age" matInput>
+        </mat-form-field>
+    
+        <mat-form-field class="col-12 col-md-6">
+            <mat-label>Correo</mat-label>
+            <input formControlName="email" matInput>
+        </mat-form-field>
+        
+        <mat-form-field class="col-12 col-md-6">
+            <mat-label>Curso</mat-label>
+            <input formControlName="course" matInput>
+        </mat-form-field>
+    
+        <mat-form-field class="col-12 col-md-6">
+            <mat-label>Estado</mat-label>
+            <mat-select  formControlName="active">
+                <mat-option value="true">Activo</mat-option>
+                <mat-option value="false">Inactivo</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+</div>
+
+<!-- Dialog action btns box -->
+<div mat-dialog-actions class="d-flex justify-content-end">
+    <button mat-flat-button color="primary" [disabled]="activateSubmitBtn()" (click)="onSubmit()">Guardar</button>
+    <button mat-dialog-close="" mat-flat-button color="warn">Cancelar</button>
+</div>

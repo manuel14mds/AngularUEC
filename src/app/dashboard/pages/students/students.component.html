@@ -5,7 +5,12 @@
 </mat-card>
 
 <!-- button add new student -->
-<button mat-raised-button color="primary" style="margin-bottom: 1rem;"><mat-icon>add</mat-icon> Nuevo Usuario</button>
+<button mat-raised-button color="primary" style="margin-bottom: 1rem;" (click)="openStudentDialog()"><mat-icon>add</mat-icon> Nuevo Usuario</button>
 
 <!-- students table -->
-<app-students-table [dataSource]="dataSource"></app-students-table>
+<app-students-table 
+[dataSource]="dataSource" 
+(switchStudentStatus)="switchStudentStatus($event)" 
+(editStudent)="onEditStudent($event)"
+></app-students-table>
+

@@ -1,9 +1,9 @@
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" >
 
     <!-- id Column -->
     <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef> Id </th>
-        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        <td mat-cell *matCellDef="let element" class="fs-01"> {{element.id}} </td>
     </ng-container>
 
     <!-- firstName Column -->
@@ -27,13 +27,20 @@
     <!-- active Column -->
     <ng-container matColumnDef="active">
         <th mat-header-cell *matHeaderCellDef> Estado </th>
-        <td mat-cell *matCellDef="let element"> {{element.active}} </td>
+        <td mat-cell *matCellDef="let element"> {{ element.active | active }} </td>
     </ng-container>
 
     <!-- actions Column -->
     <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef> Acciones </th>
-        <td mat-cell *matCellDef="let element"></td>
+        <td mat-cell *matCellDef="let element">
+            <mat-icon color="primary" style="margin-right: 10px;" (click)="editStudent.emit(element)">edit</mat-icon>
+
+            <mat-icon *ngIf="element.active; else inactiv" color="primary" (click)="switchStudentStatus.emit(element.id)">toggle_on</mat-icon>
+            <ng-template #inactiv>
+                <mat-icon (click)="switchStudentStatus.emit(element.id)">toggle_off</mat-icon>
+            </ng-template>
+        </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

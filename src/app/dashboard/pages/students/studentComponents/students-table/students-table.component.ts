@@ -11,5 +11,11 @@ export class StudentsTableComponent {
   @Input()
   dataSource: Student[] = [];
 
+  @Output()
+  switchStudentStatus = new EventEmitter<number>()
+
+  @Output()
+  editStudent = new EventEmitter<Student>()
+
   displayedColumns = ['id', 'firstName', 'lastName', 'email', 'active', 'actions'];
 }

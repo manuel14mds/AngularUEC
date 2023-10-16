@@ -5,6 +5,6 @@ export interface Student {
     age?: number
     email: string
     course?: string
-    classes: number[]|[]
+    classes?: number[]|[]
     active: boolean
 }
