@@ -6,7 +6,7 @@ import { StudentsDialogComponent } from './studentComponents/students-dialog/stu
 
 function updateValues(student: { [key: string]:any}, newData: { [key: string]: any }): object {
     for (const key in newData) {
-        if (newData.hasOwnProperty(key) && key !== 'id') {
+        if (key !== 'id') {
             const newValue = newData[key];
             if (newValue !== null && newValue !== undefined && student[key] !== newValue) {
                 student[key] = newValue;
