@@ -7,11 +7,17 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
 import { ActivePipe } from './pipes/active.pipe';
+import { FullnamePipe } from './pipes/fullname.pipe';
+import { ErrorsPipe } from './pipes/errors.pipe';
+import { MainTitleDirective } from './directives/main-title.directive';
 
 
 @NgModule({
   declarations: [
-    ActivePipe
+    ActivePipe,
+    FullnamePipe,
+    ErrorsPipe,
+    MainTitleDirective
   ],
   imports: [
     CommonModule,
@@ -24,6 +30,9 @@ import { ActivePipe } from './pipes/active.pipe';
     MatFormFieldModule,
     MatTableModule,
     ActivePipe,
+    FullnamePipe,
+    ErrorsPipe,
+    MainTitleDirective,
   ]
 })
 export class SharedModule { }

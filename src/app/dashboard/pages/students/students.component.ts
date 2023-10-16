@@ -26,7 +26,7 @@ function updateValues(student: { [key: string]:any}, newData: { [key: string]: a
 export class StudentsComponent {
     dataSource: Student[] = [
         { id: 1, firstName: 'Carla', lastName: 'Montani', email: 'carla@mail.com', classes: [], active: true },
-        { id: 2, firstName: 'Manuel', lastName: 'Florez', email: 'manuel@mail.com', classes: [], active: false },
+        { id: 2, firstName: 'Manuel', lastName: 'Florez', email: 'manuel@mail.com', classes: [], active: false, age: 29 },
     ].reverse();
     displayedColumns: string[] = ['id', 'fistName', 'lastName', 'email', 'active', 'actions'];
 

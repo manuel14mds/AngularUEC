@@ -6,16 +6,16 @@
         <td mat-cell *matCellDef="let element" class="fs-01"> {{element.id}} </td>
     </ng-container>
 
-    <!-- firstName Column -->
-    <ng-container matColumnDef="firstName">
-        <th mat-header-cell *matHeaderCellDef> Nombre </th>
-        <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+    <!-- fullname Column -->
+    <ng-container matColumnDef="fullName">
+        <th mat-header-cell *matHeaderCellDef> Nombre Completo</th>
+        <td mat-cell *matCellDef="let element"> {{element | fullname}} </td>
     </ng-container>
 
-    <!-- lastName Column -->
-    <ng-container matColumnDef="lastName">
-        <th mat-header-cell *matHeaderCellDef> Apellido </th>
-        <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+    <!-- age Column -->
+    <ng-container matColumnDef="age">
+        <th mat-header-cell *matHeaderCellDef> Edad</th>
+        <td mat-cell *matCellDef="let element"> {{element.age}} </td>
     </ng-container>
 
     <!-- email Column -->
